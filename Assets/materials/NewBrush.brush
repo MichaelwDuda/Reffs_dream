@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12146, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: New Brush
+  m_Name: NewBrush
   m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Brush
-  m_Mask: {fileID: 2800000, guid: 7919aa0bfa3cd9a40a0321833724b5eb, type: 3}
+  m_Mask: {fileID: 2800000, guid: e19dc8b7583a03e44ba986668c5817dd, type: 3}
   m_Falloff:
     serializedVersion: 2
     m_Curve:
@@ -37,7 +37,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_RadiusScale: 1.263
+  m_RadiusScale: 1.4849247
   m_BlackWhiteRemapMin: 0
   m_BlackWhiteRemapMax: 1
   m_InvertRemapRange: 0
