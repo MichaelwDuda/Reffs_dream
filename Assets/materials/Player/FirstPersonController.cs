@@ -10,6 +10,9 @@ public class FirstPersonController : MonoBehaviour
     public float gravity = -20f;
     public float mouseSensitivity = 2f;
     public float airControl = 0.5f;
+    public bool isSprinting = false;
+    public float currentSpeed;
+    public float sprintSpeed = 12f;
 
     [Header("References")]
     public Transform cameraTransform;
@@ -18,6 +21,7 @@ public class FirstPersonController : MonoBehaviour
     public InputActionReference moveAction;
     public InputActionReference lookAction;
     public InputActionReference jumpAction;
+    public InputActionReference sprintAction;
 
     private CharacterController controller;
     private Vector3 velocity;
@@ -33,6 +37,7 @@ public class FirstPersonController : MonoBehaviour
         moveAction.action.Enable();
         lookAction.action.Enable();
         jumpAction.action.Enable();
+        sprintAction.action.Enable();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -43,6 +48,7 @@ public class FirstPersonController : MonoBehaviour
         moveAction.action.Disable();
         lookAction.action.Disable();
         jumpAction.action.Disable();
+        sprintAction.action.Disable();
     }
 
     private void Update()
@@ -68,6 +74,9 @@ public class FirstPersonController : MonoBehaviour
     private void HandleMovement()
     {
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+        isSprinting = sprintAction.action.IsPressed();
+        currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
+
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
 
         if (controller.isGrounded)
