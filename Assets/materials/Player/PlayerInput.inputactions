@@ -168,6 +168,90 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "attack1",
+            "id": "8dcbeea8-672b-4589-964d-7dfc186dd2ad",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "bc530e51-e9eb-4821-ad16-d64f8ab12674",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "df388be2-2681-40c7-a20f-1e8148986c20",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "attack2",
+            "id": "98b5a749-fe38-47d7-905b-709141dc43f1",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "1200fc83-fed2-4595-8bd9-f48d511ffb04",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "25daf78b-34a7-4fe8-9df0-ea0235dbb5c8",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "attack3",
+            "id": "d55cd75e-0248-4b68-ab9e-38f1638c9366",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "d2d0e3e1-decc-420c-9c29-62c3837260b1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "70bc7456-3a8a-43c2-b690-d2b36a1a2516",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
