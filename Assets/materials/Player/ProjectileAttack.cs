@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ProjectileAttack : MonoBehaviour
+public class ProjectileAttack : BaseAttack
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
@@ -11,6 +11,6 @@ public class ProjectileAttack : MonoBehaviour
         GameObject proj = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
         Rigidbody rb = proj.GetComponent<Rigidbody>();
-        rb.velocity = firePoint.forward * projectileSpeed;
+        rb.linearVelocity = firePoint.forward * projectileSpeed;
     }
 }
