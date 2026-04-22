@@ -2558,6 +2558,8 @@ GameObject:
   - component: {fileID: 1507734667}
   - component: {fileID: 1507734666}
   - component: {fileID: 1507734665}
+  - component: {fileID: 1507734670}
+  - component: {fileID: 1507734669}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -2658,6 +2660,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507734669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507734664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ff382aca54acb468d5184fc966e106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyMove
+  player: {fileID: 1868980915}
+  moveSpeed: 3
+  rotationSpeed: 10
+  stopDistance: 1
+--- !u!114 &1507734670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507734664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195d0f0def269314485fbc2653f98338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  health: 30
 --- !u!43 &1533511273
 Mesh:
   m_ObjectHideFlags: 0
