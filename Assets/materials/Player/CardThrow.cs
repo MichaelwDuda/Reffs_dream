@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class CardThrow : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float xSpeed = 720f;
+    [SerializeField] private float ySpeed = 90f;
+    [SerializeField] private float zSpeed = 45f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(
+            new Vector3(xSpeed, ySpeed, zSpeed) * Time.deltaTime,
+            Space.Self
+        );
     }
 }

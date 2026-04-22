@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 480940802615312841}
   - component: {fileID: 7684715388614630386}
   - component: {fileID: 6430469430441320903}
+  - component: {fileID: -7333650158543083296}
+  - component: {fileID: -1788044987577961216}
   m_Layer: 0
   m_Name: RedCard
   m_TagString: Untagged
@@ -28,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4459044457679044033}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 601.3833, y: 0.9199, z: 376.3986}
   m_LocalScale: {x: 0.24237375, y: 0.01, z: 0.11745536}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &1885377219876773414
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -330,3 +332,34 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &-7333650158543083296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459044457679044033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bb62806598af44d875914c993d758a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardThrow
+  xSpeed: 720
+  ySpeed: 90
+  zSpeed: 45
+--- !u!114 &-1788044987577961216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459044457679044033}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64419e67f16114a43a82895fc371d136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileAttack
+  cooldown: 0.5
+  projectilePrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  projectileSpeed: 15
