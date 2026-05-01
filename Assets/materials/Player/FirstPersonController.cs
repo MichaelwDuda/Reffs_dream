@@ -22,6 +22,10 @@ public class FirstPersonController : MonoBehaviour
     public InputActionReference lookAction;
     public InputActionReference jumpAction;
     public InputActionReference sprintAction;
+    public InputActionReference attack1Action;
+    public InputActionReference attack2Action;
+    public InputActionReference attack3Action;
+    public Attacks attackManager;
 
     private CharacterController controller;
     private Vector3 velocity;
@@ -38,6 +42,9 @@ public class FirstPersonController : MonoBehaviour
         lookAction.action.Enable();
         jumpAction.action.Enable();
         sprintAction.action.Enable();
+        attack1Action.action.Enable();
+        attack2Action.action.Enable();
+        attack3Action.action.Enable();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -49,12 +56,28 @@ public class FirstPersonController : MonoBehaviour
         lookAction.action.Disable();
         jumpAction.action.Disable();
         sprintAction.action.Disable();
+        attack1Action.action.Disable();
+        attack2Action.action.Disable();
+        attack3Action.action.Disable();
     }
 
     private void Update()
     {
         HandleMouseLook();
         HandleMovement();
+        if (attack1Action.action.WasPressedThisFrame())
+            {
+                attackManager.attackSlot1?.DoAttack();
+            }
+        if (attack2Action.action.WasPressedThisFrame())
+            {
+                attackManager.attackSlot2?.DoAttack();
+            }
+        if (attack3Action.action.WasPressedThisFrame())
+            {
+                attackManager.attackSlot3?.DoAttack();
+            }
+
     }
 
     private void HandleMouseLook()

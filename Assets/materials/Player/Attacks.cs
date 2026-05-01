@@ -1,21 +1,36 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Attacks : MonoBehaviour
 {
      [Header("Equipped Attacks")]
-    public BaseAttack attackSlot1;   // J key
-    public BaseAttack attackSlot2;   // K key
-    public BaseAttack attackSlot3;   // L key
+    public BaseAttack attackSlot1;   
+    public BaseAttack attackSlot2; 
+    public BaseAttack attackSlot3;
+    private CharacterController controller;
 
-    void Update()
+
+    private void OnAttack1(InputAction.CallbackContext ctx)
     {
-        if (Input.GetKeyDown(KeyCode.J) && attackSlot1 != null)
-            attackSlot1.DoAttack();
+        attackSlot1?.DoAttack();
+    }
 
-        if (Input.GetKeyDown(KeyCode.K) && attackSlot2 != null)
-            attackSlot2.DoAttack();
+    private void OnAttack2(InputAction.CallbackContext ctx)
+    {
+        attackSlot2?.DoAttack();
+    }
 
-        if (Input.GetKeyDown(KeyCode.L) && attackSlot3 != null)
-            attackSlot3.DoAttack();
+    private void OnAttack3(InputAction.CallbackContext ctx)
+    {
+        attackSlot3?.DoAttack();
+    }
+    public void EquipAttack(int slot, BaseAttack newAttack)
+    {
+        switch (slot)
+        {
+            case 1: attackSlot1 = newAttack; break;
+            case 2: attackSlot2 = newAttack; break;
+            case 3: attackSlot3 = newAttack; break;
+        }
     }
 }

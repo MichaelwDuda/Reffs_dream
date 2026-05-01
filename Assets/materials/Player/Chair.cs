@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Chair : MonoBehaviour
+public class Chair : ProjectileAttack
 {
     public int damage = 10;
     public float knockbackForce = 10f;

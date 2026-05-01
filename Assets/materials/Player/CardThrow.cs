@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CardThrow : MonoBehaviour
+public class CardThrow : ProjectileAttack
 {
     [SerializeField] private float xSpeed = 720f;
     [SerializeField] private float ySpeed = 90f;
