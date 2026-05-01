@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Chair : ProjectileAttack
+public class Chair : MonoBehaviour
 {
     public int damage = 10;
     public float knockbackForce = 10f;
@@ -8,7 +8,7 @@ public class Chair : ProjectileAttack
 
     void Start()
     {
-        Destroy(gameObject, lifeTime);
+        Destroy(gameObject, 0.05f);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -29,6 +29,6 @@ public class Chair : ProjectileAttack
             }
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject, 0.05f);
     }
 }

@@ -33988,7 +33988,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 601
+  m_VersionIndex: 628
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -34250,6 +34250,7 @@ GameObject:
   - component: {fileID: 5821011369798807810}
   - component: {fileID: 7845518758926498810}
   - component: {fileID: 7149025226047855573}
+  - component: {fileID: 6670500174923134327}
   m_Layer: 0
   m_Name: Reff
   m_TagString: Untagged
@@ -34415,11 +34416,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5584683056123066578}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e5f5d37163bb5e4ba20da012b4f32b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attacks
-  attackSlot1: {fileID: 0}
+  attackSlot1: {fileID: 6670500174923134327}
   attackSlot2: {fileID: 0}
   attackSlot3: {fileID: 0}
+--- !u!114 &6670500174923134327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584683056123066578}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64419e67f16114a43a82895fc371d136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileAttack
+  cooldown: 0.5
+  projectilePrefab: {fileID: 0}
+  firePoint: {fileID: 4644173375919120226}
+  projectileSpeed: 15

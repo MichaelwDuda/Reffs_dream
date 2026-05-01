@@ -23466,6 +23466,7 @@ GameObject:
   - component: {fileID: 7902424378510337239}
   - component: {fileID: 602127141950622868}
   - component: {fileID: 8084703195829899610}
+  - component: {fileID: 7150882788350281770}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -23582,10 +23583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c1e5fa672920841992c0d330e72113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chair
-  cooldown: 0.5
-  projectilePrefab: {fileID: 7467055083026494115}
-  firePoint: {fileID: 5636370630784510722, guid: 419a8a0302edad649a3af00a7c34d264, type: 3}
-  projectileSpeed: 15
   damage: 10
   knockbackForce: 10
   lifeTime: 3
@@ -23843,6 +23840,33 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!54 &7150882788350281770
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467055083026494115}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7834627913575019581
 GameObject:
   m_ObjectHideFlags: 0
