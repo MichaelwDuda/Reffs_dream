@@ -10,6 +10,11 @@ public class Chair : MonoBehaviour
     {
         Destroy(gameObject, lifeTime);
     }
+    void FixedUpdate()
+    {
+        // Keep rotation flat on the ground
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
 
     void OnCollisionEnter(Collision collision)
     {
