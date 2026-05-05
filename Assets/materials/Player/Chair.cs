@@ -8,7 +8,7 @@ public class Chair : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 0.05f);
+        Destroy(gameObject, lifeTime);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -29,6 +29,6 @@ public class Chair : MonoBehaviour
             }
         }
 
-        Destroy(gameObject, 0.05f);
+        Destroy(gameObject, lifeTime);
     }
 }
