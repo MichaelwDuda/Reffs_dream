@@ -23583,7 +23583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c1e5fa672920841992c0d330e72113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chair
-  damage: 40
+  damage: 10
   knockbackForce: 10
   lifeTime: 3
 --- !u!114 &8084703195829899610
