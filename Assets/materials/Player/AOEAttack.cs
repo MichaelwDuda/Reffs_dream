@@ -5,21 +5,23 @@ public class AOEAttack : BaseAttack
     [Header("AOE Settings")]
     public float radius = 5f;
     public float stunDuration = 2f;
+    public float damage = 20;
     public LayerMask enemyLayer;
     public Transform attackOrigin; // usually the player
 
     protected override void PerformAttack()
     {
-        // Visualize or spawn VFX here if you want
-
-        Collider[] hits = Physics.OverlapSphere(attackOrigin.position, radius, enemyLayer);
+        Collider[] hits = Physics.OverlapSphere(transform.position, radius);
 
         foreach (Collider hit in hits)
         {
-            EnemyStun stun = hit.GetComponent<EnemyStun>();
-            if (stun != null)
+            if (hit.CompareTag("enemy"))
             {
-                stun.ApplyStun(stunDuration);
+                EnemyHealth hp = hit.GetComponent<EnemyHealth>();
+                if (hp != null)
+                {
+                    hp.TakeDamage(damage);
+                }
             }
         }
     }
