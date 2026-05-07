@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ProjectileAttack : BaseAttack
+public class flagAttack : BaseAttack
 {
     public GameObject projectilePrefab;
     public Transform firePoint;

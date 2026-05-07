@@ -34100,7 +34100,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 661
+  m_VersionIndex: 667
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -34367,7 +34367,9 @@ GameObject:
   - component: {fileID: 61430715907051283}
   - component: {fileID: 740680119957624711}
   - component: {fileID: 3929163355446743760}
-  - component: {fileID: 5924502515232191154}
+  - component: {fileID: 8737704029873053117}
+  - component: {fileID: 4884949421258834653}
+  - component: {fileID: 7290448756069848840}
   m_Layer: 0
   m_Name: Reff
   m_TagString: Player
@@ -34538,7 +34540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5f5d37163bb5e4ba20da012b4f32b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attacks
-  attackSlot1: {fileID: 5924502515232191154}
+  attackSlot1: {fileID: 6670500174923134327}
   attackSlot2: {fileID: 3929163355446743760}
   attackSlot3: {fileID: 740680119957624711}
 --- !u!114 &6670500174923134327
@@ -34605,7 +34607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c6d72b19df57844b2c03585e97d211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AOEAttack
-  cooldown: 0.5
+  cooldown: 1
   radius: 5
   stunDuration: 2
   damage: 20
@@ -34613,7 +34615,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   attackOrigin: {fileID: 5636370630784510722}
---- !u!114 &5924502515232191154
+--- !u!114 &8737704029873053117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34622,10 +34624,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 5584683056123066578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64419e67f16114a43a82895fc371d136, type: 3}
+  m_Script: {fileID: 11500000, guid: 664e921d202452644b1251c251645064, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ProjectileAttack
+  m_EditorClassIdentifier: Assembly-CSharp::CardAttack
+  cooldown: 0.5
+  projectilePrefab: {fileID: 4459044457679044033, guid: 0da1dd3ff62cb9f49a06c8b9538b89f2, type: 3}
+  firePoint: {fileID: 8791979985545097873}
+  projectileSpeed: 15
+--- !u!114 &4884949421258834653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584683056123066578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66ad52d9bd1baa4bbd937511abca6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::flagAttack
   cooldown: 0.5
   projectilePrefab: {fileID: 6128725650874547968, guid: e6a54a461b981e9478db8aa8dc5de29d, type: 3}
+  firePoint: {fileID: 8791979985545097873}
+  projectileSpeed: 15
+--- !u!114 &7290448756069848840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584683056123066578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5c9ef1e98f7dfc40bb260c652356d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FrisbeeAttack
+  cooldown: 0.5
+  projectilePrefab: {fileID: 6958171089808918966, guid: ee4c713e87a87744f98a6cb72ee1d3c0, type: 3}
   firePoint: {fileID: 8791979985545097873}
   projectileSpeed: 15

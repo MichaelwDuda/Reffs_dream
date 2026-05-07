@@ -2,78 +2,40 @@ using UnityEngine;
 
 public class pickUp : MonoBehaviour
 {
-    [Header("Attack to Give")]
-    public BaseAttack attackPrefab;
-
-    [Header("Pickup Settings")]
-    public bool autoAssignToFirstEmptySlot = true;
-    public int specificSlot = 0; // 0 = auto, 1/2/3 = force slot
+    [Header("Attack To Give Player")]
+    public string attackName;   // Drag the attack script prefab here
 
     private void OnTriggerEnter(Collider other)
     {
         Attacks attackManager = other.GetComponent<Attacks>();
-        if (attackManager == null)
-            return;
+        if (attackManager == null) return;
 
-        // If forcing a specific slot
-        if (specificSlot >= 1 && specificSlot <= 3)
+        // Find the attack script on the player by name
+        BaseAttack attack = other.GetComponent(attackName) as BaseAttack;
+        if (attack == null)
         {
-            // Only equip if the slot is empty
-            if (GetSlot(attackManager, specificSlot) == null)
-            {
-                Equip(attackManager, specificSlot);
-                Destroy(gameObject);
-            }
-
-            return; // If slot is full → ignore pickup
-        }
-
-        // Auto-assign mode
-        if (autoAssignToFirstEmptySlot)
-        {
-            // Slot 1
-            if (attackManager.attackSlot1 == null)
-            {
-                Equip(attackManager, 1);
-                Destroy(gameObject);
-                return;
-            }
-
-            // Slot 2
-            if (attackManager.attackSlot2 == null)
-            {
-                Equip(attackManager, 2);
-                Destroy(gameObject);
-                return;
-            }
-
-            // Slot 3
-            if (attackManager.attackSlot3 == null)
-            {
-                Equip(attackManager, 3);
-                Destroy(gameObject);
-                return;
-            }
-
-            // All slots full → ignore pickup
+            Debug.LogError("Player does not have attack script: " + attackName);
             return;
         }
-    }
 
-    private BaseAttack GetSlot(Attacks atk, int slot)
-    {
-        return slot switch
+        // Add to first empty slot
+        if (attackManager.attackSlot1 == null)
+            attackManager.attackSlot1 = attack;
+        else if (attackManager.attackSlot2 == null)
+            attackManager.attackSlot2 = attack;
+        else if (attackManager.attackSlot3 == null)
+            attackManager.attackSlot3 = attack;
+        else
         {
-            1 => atk.attackSlot1,
-            2 => atk.attackSlot2,
-            3 => atk.attackSlot3,
-            _ => null
-        };
-    }
+            Debug.Log("All attack slots full");
+            return;
+        }
 
-    private void Equip(Attacks atk, int slot)
-    {
-        BaseAttack newAttack = Instantiate(attackPrefab, atk.transform);
-        atk.EquipAttack(slot, newAttack);
+        // Enable the attack script
+        attack.enabled = true;
+
+        Debug.Log("Activated attack: " + attackName);
+
+        Destroy(gameObject);
     }
 }
