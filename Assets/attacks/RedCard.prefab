@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7684715388614630386}
   - component: {fileID: 6430469430441320903}
   - component: {fileID: -7333650158543083296}
+  - component: {fileID: 830733734368511176}
   m_Layer: 0
   m_Name: RedCard
   m_TagString: Untagged
@@ -29,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4459044457679044033}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 601.3833, y: 0.9199, z: 376.3986}
-  m_LocalScale: {x: 0.24237375, y: 0.01, z: 0.11745536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 601.4989, y: 1.02229, z: 376.2673}
+  m_LocalScale: {x: 0.011166726, y: 0.21479009, z: 0.16848229}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1885377219876773414
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -343,10 +344,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8bb62806598af44d875914c993d758a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardThrow
-  cooldown: 0.5
-  projectilePrefab: {fileID: 0}
-  firePoint: {fileID: 0}
-  projectileSpeed: 15
-  xSpeed: 0
-  ySpeed: 200
+  xSpeed: 200
+  ySpeed: 0
   zSpeed: 0
+  damage: 10
+  lifeTime: 3
+--- !u!54 &830733734368511176
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459044457679044033}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

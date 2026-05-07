@@ -6,20 +6,16 @@ public class Stick : BaseAttack
     public float range = 2f;
     public float radius = 1f;
     public LayerMask hitLayers;
-
-    [Header("Optional Animation")]
-    public Animator animator;
-    public string attackTrigger = "Attack";
+    public GameObject hockeyStickPrefab;
+    public Transform spawnPoint;
 
     protected override void PerformAttack()
     {
-        // Play animation if assigned
-        if (animator != null && !string.IsNullOrEmpty(attackTrigger))
-            animator.SetTrigger(attackTrigger);
-
         // Hit detection
         Vector3 origin = transform.position + transform.forward * range * 0.5f;
         Collider[] hits = Physics.OverlapSphere(origin, radius, hitLayers);
+        // Spawn the swinging stick
+        Instantiate(hockeyStickPrefab, spawnPoint.position, spawnPoint.rotation);
 
         foreach (Collider hit in hits)
         {
