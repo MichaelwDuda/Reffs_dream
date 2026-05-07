@@ -785,5 +785,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwingMotion
   swingSpeed: 500
-  swingDuration: 0.1
+  swingDuration: 0.25
   damage: 10

@@ -347,7 +347,7 @@ MonoBehaviour:
   xSpeed: 200
   ySpeed: 0
   zSpeed: 0
-  damage: 10
+  damage: 50
   lifeTime: 3
 --- !u!54 &830733734368511176
 Rigidbody:
