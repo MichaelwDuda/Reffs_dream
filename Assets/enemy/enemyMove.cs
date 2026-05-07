@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class enemyMove : MonoBehaviour
 {
-    public Transform player;
+    public string targetTag = "Player";
+    private Transform player;
 
     [Header("Movement Settings")]
     public float moveSpeed = 3f;
@@ -26,7 +27,12 @@ public class enemyMove : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        playerHealth = player.GetComponent<PlayerHealth>();
+        GameObject targetObj = GameObject.FindGameObjectWithTag(targetTag);
+        if (targetObj != null)
+        {
+            player = targetObj.transform;
+            playerHealth = player.GetComponent<PlayerHealth>();
+        }
     }
 
     private void FixedUpdate()

@@ -33988,7 +33988,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 640
+  m_VersionIndex: 655
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -34126,7 +34126,7 @@ Transform:
   m_GameObject: {fileID: 857226984967713803}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34253,9 +34253,11 @@ GameObject:
   - component: {fileID: 6670500174923134327}
   - component: {fileID: 61430715907051283}
   - component: {fileID: 740680119957624711}
+  - component: {fileID: 3929163355446743760}
+  - component: {fileID: 5924502515232191154}
   m_Layer: 0
   m_Name: Reff
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34423,9 +34425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5f5d37163bb5e4ba20da012b4f32b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attacks
-  attackSlot1: {fileID: 6670500174923134327}
-  attackSlot2: {fileID: 0}
-  attackSlot3: {fileID: 0}
+  attackSlot1: {fileID: 5924502515232191154}
+  attackSlot2: {fileID: 3929163355446743760}
+  attackSlot3: {fileID: 740680119957624711}
 --- !u!114 &6670500174923134327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34433,7 +34435,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5584683056123066578}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64419e67f16114a43a82895fc371d136, type: 3}
   m_Name: 
@@ -34475,6 +34477,42 @@ MonoBehaviour:
   radius: 1
   hitLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
-  animator: {fileID: 0}
-  attackTrigger: Attack
+    m_Bits: 8
+  hockeyStickPrefab: {fileID: 1903418913199469567, guid: 8c0d5a42bd0df5f438b45aaa9f598d45, type: 3}
+  spawnPoint: {fileID: 8791979985545097873}
+--- !u!114 &3929163355446743760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584683056123066578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c6d72b19df57844b2c03585e97d211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AOEAttack
+  cooldown: 0.5
+  radius: 5
+  stunDuration: 2
+  damage: 20
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  attackOrigin: {fileID: 5636370630784510722}
+--- !u!114 &5924502515232191154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584683056123066578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64419e67f16114a43a82895fc371d136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileAttack
+  cooldown: 0.5
+  projectilePrefab: {fileID: 6128725650874547968, guid: e6a54a461b981e9478db8aa8dc5de29d, type: 3}
+  firePoint: {fileID: 8791979985545097873}
+  projectileSpeed: 15

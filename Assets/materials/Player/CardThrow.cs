@@ -25,14 +25,8 @@ public class CardThrow : MonoBehaviour
             if (health != null)
                 health.TakeDamage(damage);
 
-            // Knockback
-            Rigidbody enemyRb = collision.gameObject.GetComponent<Rigidbody>();
-            if (enemyRb != null)
-            {
-                Vector3 direction = (collision.transform.position - transform.position).normalized;
-            }
         }
 
-        Destroy(gameObject, lifeTime);
+        Destroy(gameObject);
     }
 }
