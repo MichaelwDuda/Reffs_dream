@@ -7,7 +7,7 @@ public class AOEAttack : BaseAttack
     public float stunDuration = 2f;
     public float damage = 20;
     public LayerMask enemyLayer;
-    public Transform attackOrigin; // usually the player
+    public Transform attackOrigin;
 
     protected override void PerformAttack()
     {

@@ -11,7 +11,7 @@ public class ProceduralGenerator : MonoBehaviour
     public Transform parentContainer;
 
 
-    public float absoluteGroundLevel = 30f; // We set it to 30, because we initially set our terrain to have a height of 30
+    public float absoluteGroundLevel = 30f;
 
     void Start()
     {
@@ -44,10 +44,6 @@ public class ProceduralGenerator : MonoBehaviour
            0f,
            Random.Range(-generationAreaSize.z / 2, generationAreaSize.z / 2)
        );
-
-        // Optionally, you can adjust the Y coordinate based on terrain height or other criteria
-        // For example:
-        // randomPosition.y = Terrain.activeTerrain.SampleHeight(randomPosition);
 
         return transform.position + randomPosition;
     }

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterWep : MonoBehaviour
 {
-    public AttackChoice AttackChoice;   // Drag your ScriptableObject here
+    public AttackChoice AttackChoice;   
 
     public void ChooseAttack(string attackName)
     {

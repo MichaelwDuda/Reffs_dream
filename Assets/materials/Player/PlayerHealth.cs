@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -37,8 +38,12 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player Died!");
 
-        // Freeze game or trigger respawn
-        Time.timeScale = 0f;
+        //trigger respawn
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        SceneManager.LoadScene("MainMenu");
+        currentHealth = maxHealth;
 
     }
 }

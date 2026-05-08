@@ -1424,7 +1424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProceduralGenerator
   prefab: {fileID: 5611016827306410349, guid: e373dfd9f296a8b4a91c00731885c9ad, type: 3}
-  numberOfPrefabInstances: 10
+  numberOfPrefabInstances: 50
   generationAreaSize: {x: 200, y: 1, z: 200}
   parentContainer: {fileID: 1676991306}
   absoluteGroundLevel: 1

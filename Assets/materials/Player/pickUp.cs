@@ -3,7 +3,7 @@ using UnityEngine;
 public class pickUp : MonoBehaviour
 {
     [Header("Attack To Give Player")]
-    public string attackName;   // Drag the attack script prefab here
+    public string attackName;
 
     private void OnTriggerEnter(Collider other)
     {
