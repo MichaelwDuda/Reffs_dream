@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5879205311793938349}
   - component: {fileID: 4451643109455260762}
   - component: {fileID: 1516136857791160107}
-  - component: {fileID: 8145782403862533175}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 133695486944141392}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.016, y: -0.029, z: 0.94200635}
+  m_LocalPosition: {x: 0.016, y: -0.029, z: 1.628}
   m_LocalScale: {x: 0.01001, y: 0.01001, z: 0.01001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -91,27 +90,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8145782403862533175
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133695486944141392}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &642158044361741428
 GameObject:
   m_ObjectHideFlags: 0
@@ -34100,7 +34078,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 667
+  m_VersionIndex: 685
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -34238,7 +34216,7 @@ Transform:
   m_GameObject: {fileID: 857226984967713803}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.727}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34370,6 +34348,7 @@ GameObject:
   - component: {fileID: 8737704029873053117}
   - component: {fileID: 4884949421258834653}
   - component: {fileID: 7290448756069848840}
+  - component: {fileID: 5825030670287774573}
   m_Layer: 0
   m_Name: Reff
   m_TagString: Player
@@ -34540,9 +34519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5f5d37163bb5e4ba20da012b4f32b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attacks
-  attackSlot1: {fileID: 6670500174923134327}
-  attackSlot2: {fileID: 3929163355446743760}
-  attackSlot3: {fileID: 740680119957624711}
+  attackSlot1: {fileID: 0}
+  attackSlot2: {fileID: 0}
+  attackSlot3: {fileID: 0}
 --- !u!114 &6670500174923134327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34663,3 +34642,16 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6958171089808918966, guid: ee4c713e87a87744f98a6cb72ee1d3c0, type: 3}
   firePoint: {fileID: 8791979985545097873}
   projectileSpeed: 15
+--- !u!114 &5825030670287774573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584683056123066578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030cd45ccc802e143b65786d7b0c03ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReffAttackLoader
+  attackChoice: {fileID: 11400000, guid: 9dcf1cc40da666349b52deb0eb789375, type: 2}
